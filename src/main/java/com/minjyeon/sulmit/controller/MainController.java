@@ -1,26 +1,24 @@
 package com.minjyeon.sulmit.controller;
 
-import org.springframework.stereotype.Controller;
+import com.minjyeon.sulmit.dto.ResponseData;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@RequiredArgsConstructor
 public class MainController {
-    
-    // 홈
+
     @GetMapping("/")
-    public String index(){
-        return "index";
+    public ResponseEntity<ResponseData<?>> home() {
+        return ResponseEntity.status(HttpStatus.OK).body(ResponseData.success());
     }
-    
-    // 로그인 화면
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
-    
-    // 회원가입
-    @GetMapping("/register")
-    public String register(){
-        return "register";
-    }
+
+//    @GetMapping("/index")
+//    public ResponseEntity<ResponseData<?>> index() {
+//        return ResponseEntity.status(HttpStatus.OK).body(ResponseData.success());
+//    }
+
 }
