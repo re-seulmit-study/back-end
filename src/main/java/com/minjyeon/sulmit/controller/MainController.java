@@ -18,14 +18,14 @@ public class MainController {
     }
 
     // 로그인 페이지를 반환합니다.
-    @GetMapping("/login")
-    public ResponseEntity<ResponseData<?>> login() {
-        System.out.println("로그인 페이지 반환");
-        return ResponseEntity.status(HttpStatus.OK).body(ResponseData.success());
-    }
+//    @GetMapping("/api/user/login")
+//    public ResponseEntity<ResponseData<?>> login() {
+//        System.out.println("로그인 페이지 반환");
+//        return ResponseEntity.status(HttpStatus.OK).body(ResponseData.success());
+//    }
 
     // 회원가입 페이지를 반환합니다.
-    @GetMapping("/register")
+    @GetMapping("/api/user/signup")
     public ResponseEntity<ResponseData<?>> register() {
         System.out.println("회원가입 페이지 반환");
         return ResponseEntity.status(HttpStatus.OK).body(ResponseData.success());

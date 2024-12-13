@@ -41,7 +41,7 @@ public class UserController {
     }
 
     // 로그인 데이터를 받아 인증을 수행합니다.
-    @PostMapping("/register")
+    @PostMapping("/api/user/signup")
     public ResponseEntity<?> signup(@Valid @RequestBody SignupRequestDto requestDto, BindingResult bindingResult) {
         // Validation 예외 처리
         if (bindingResult.hasErrors()) {
